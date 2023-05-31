@@ -112,11 +112,12 @@
             // 
             btnSomar.Dock = DockStyle.Fill;
             btnSomar.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSomar.Image = Properties.Resources.adicao;
             btnSomar.Location = new Point(297, 183);
             btnSomar.Name = "btnSomar";
             btnSomar.Size = new Size(92, 57);
             btnSomar.TabIndex = 13;
-            btnSomar.Text = "+";
+            btnSomar.Tag = "+";
             btnSomar.UseVisualStyleBackColor = true;
             // 
             // btnIgual
@@ -156,11 +157,12 @@
             // 
             btnSubtrair.Dock = DockStyle.Fill;
             btnSubtrair.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSubtrair.Image = Properties.Resources.subtracao;
             btnSubtrair.Location = new Point(297, 123);
             btnSubtrair.Name = "btnSubtrair";
             btnSubtrair.Size = new Size(92, 54);
             btnSubtrair.TabIndex = 9;
-            btnSubtrair.Text = "-";
+            btnSubtrair.Tag = "-";
             btnSubtrair.UseVisualStyleBackColor = true;
             // 
             // btn3
@@ -200,11 +202,12 @@
             // 
             btnMultiplicar.Dock = DockStyle.Fill;
             btnMultiplicar.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMultiplicar.Image = Properties.Resources.multiplicação;
             btnMultiplicar.Location = new Point(297, 63);
             btnMultiplicar.Name = "btnMultiplicar";
             btnMultiplicar.Size = new Size(92, 54);
             btnMultiplicar.TabIndex = 5;
-            btnMultiplicar.Text = "*";
+            btnMultiplicar.Tag = "*";
             btnMultiplicar.UseVisualStyleBackColor = true;
             // 
             // btn6
@@ -222,11 +225,12 @@
             // 
             btnDividir.Dock = DockStyle.Fill;
             btnDividir.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDividir.Image = Properties.Resources.divisão;
             btnDividir.Location = new Point(297, 3);
             btnDividir.Name = "btnDividir";
             btnDividir.Size = new Size(92, 54);
             btnDividir.TabIndex = 3;
-            btnDividir.Text = "/";
+            btnDividir.Tag = "/";
             btnDividir.UseVisualStyleBackColor = true;
             // 
             // btn9
@@ -291,14 +295,14 @@
             txtNumeros.TabIndex = 0;
             txtNumeros.TextChanged += textBox1_TextChanged;
             // 
-            // Form1
+            // CalculadoraTelaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(416, 404);
             Controls.Add(panel1);
             Controls.Add(panCalculo);
-            Name = "Form1";
+            Name = "CalculadoraTelaForm";
             ShowIcon = false;
             Text = "Calculadora Academia do Programador";
             panCalculo.ResumeLayout(false);

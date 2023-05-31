@@ -20,7 +20,14 @@ namespace Calculadora2._0.WinApp
                 case '/': resultado = primeiroNumero / segundoNumero; break;
             }
 
-            return resultado.ToString();
+            return Math.Round(resultado, 2).ToString();
+        }
+
+        internal void Reset()
+        {
+            primeiroNumero = 0;
+            segundoNumero = 0;
+            operacao = char.MinValue;
         }
     }
 }

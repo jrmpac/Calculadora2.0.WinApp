@@ -41,32 +41,52 @@ namespace Calculadora2._0.WinApp
 
         private void RegistrarOperacao(object? sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNumeros.Text))
+                return;
+
             calculadora.primeiroNumero = Convert.ToDecimal(txtNumeros.Text);
 
             Button botaoClicado = (Button)sender;
 
-            calculadora.operacao= botaoClicado.Text[0];
+            calculadora.operacao = Convert.ToChar(botaoClicado.Tag);
 
             txtCalculo.Text = txtNumeros.Text + " " + botaoClicado.Text;
 
             txtNumeros.Text = "";
         }
-        
+
         private void ExecutarCalculo(object? sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNumeros.Text))
+                return;
+
             // precisamos do primeiro número
 
             // precisamos da operação selecionada
-            
+
             //precisamos do segundo número
 
             calculadora.segundoNumero = Convert.ToDecimal(txtNumeros.Text);
 
-            txtCalculo.Text = calculadora.Calcular();
+            try
+            {
+                txtCalculo.Text = calculadora.Calcular();
+            }
+            catch (DivideByZeroException)
+            {
+                MessageBox.Show("Segundo número inválido");
+            }
 
             txtNumeros.Text = "";
         }
 
+        private void Limpar(object? sender, EventArgs e)
+        {
+            txtNumeros.ResetText();
+            txtCalculo.ResetText();
+
+            calculadora.Reset();
+        }
 
 
 
